@@ -1,9 +1,13 @@
+import { Sorter } from './SorterInstance';
+
 export class Node {
   constructor(public value: number, public next: Node | null = null) {}
 }
 
-export class LinkedList {
-  constructor(public head: Node | null = null) {}
+export class LinkedList extends Sorter {
+  constructor(public head: Node | null = null) {
+    super();
+  }
 
   get length(): number {
     if (!this.head) {
